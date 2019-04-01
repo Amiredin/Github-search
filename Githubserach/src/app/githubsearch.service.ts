@@ -14,7 +14,7 @@ export class GithubsearchService {
 
   constructor(private http:HttpClient) {
     console.log(this.username )
-   this.username =""
+   this.username ="Amiredin"
    }
    getProfileInfo(){
     return this.http.get("https://api.github.com/users" + this.username  );

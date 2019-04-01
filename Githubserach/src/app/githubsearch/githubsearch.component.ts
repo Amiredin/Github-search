@@ -14,14 +14,17 @@ export class GithubsearchComponent implements OnInit {
 
     profile:any;
     username: string;
-
+    repos:any;
   constructor(private GithubsearchService: GithubsearchService) {
    }
    findProfile(){
     this.GithubsearchService.updateProfile(this.username);
     this.GithubsearchService.getProfileInfo().subscribe(github => {
       this.profile = github;
-      })
+      });
+
+    
+
   } 
 
   ngOnInit() {

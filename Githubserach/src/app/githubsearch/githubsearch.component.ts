@@ -18,8 +18,8 @@ export class GithubsearchComponent implements OnInit {
   constructor(private GithubsearchService: GithubsearchService) {
    }
    findProfile(){
-    this.GithubsearchService.updateProfile(this.username);
-    this.GithubsearchService.getProfileInfo().subscribe(github => {
+    // this.GithubsearchService.updateProfile(this.username);
+    this.GithubsearchService.getProfileInfo(this.username).subscribe(github => {
       this.profile = github;
       });
 

@@ -8,18 +8,15 @@ import { observable } from 'rxjs';
 })
 export class GithubsearchService {
 
-  username: string;
+  ;
   
  
 
   constructor(private http:HttpClient) {
-    console.log(this.username )
-   this.username ="Amiredin"
+    
    }
-   getProfileInfo(){
-    return this.http.get("https://api.github.com/users" + this.username  );
+   getProfileInfo(username: string){
+    return this.http.get("https://api.github.com/users/" + username  );
   }
-  updateProfile(username:string){
-    this.username = username;
-  }
+
 }
